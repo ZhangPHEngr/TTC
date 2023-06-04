@@ -42,7 +42,7 @@ J = np.zeros((3, 200))
 H = np.zeros((3, 3))
 for idx in range(200):
     idx_select = points_idx_select[idx]
-    # print(idx, idx_select)
+    # print(idx, idx_sele)
     v = idx_select // (box_T[2] - box_T[0]) + box_T[1]
     u = math.fmod(idx_select, (box_T[2] - box_T[0])) + box_T[0]
     v_c = v - box_T_center[1]
@@ -74,3 +74,6 @@ for it in range(20):
     p[0] -= delta_p[0] / delta_p[2]
     p[1] -= delta_p[1] / delta_p[2]
     p[2] += 1 / delta_p[2]
+
+
+
